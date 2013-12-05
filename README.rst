@@ -3,7 +3,7 @@ Usage
 
 .. code-block:: console
 
-    django-admin.py startproject --template=https://github.com/henriquebastos/dj-tpl-kickstart/archive/master.zip -e py,env -n Procfile PROJECTNAME
+    django-admin.py startproject --template=https://github.com/henriquebastos/dj-kickstart/archive/master.zip -e py,env -n Procfile PROJECTNAME
 
 License
 -------
