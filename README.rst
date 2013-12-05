@@ -4,6 +4,8 @@ Usage
 .. code-block:: console
 
     django-admin.py startproject --template=https://github.com/henriquebastos/dj-kickstart/archive/master.zip -e py,env -n Procfile PROJECTNAME
+    mv rename-to-.env .env
+    pip install -r requirements.txt
 
 License
 -------
