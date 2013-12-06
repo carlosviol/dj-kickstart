@@ -2,7 +2,7 @@
 from django.test import TestCase
 
 
-class HomeTest(TestCase):
+class IndexTest(TestCase):
     def setUp(self):
         self.resp = self.client.get('/')
 
@@ -14,6 +14,6 @@ class HomeTest(TestCase):
 
     def test_template(self):
         """
-        Home must use template index.html
+        Index must use template base.html
         """
         self.assertTemplateUsed(self.resp, 'core/base.html')

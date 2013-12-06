@@ -12,11 +12,11 @@ https://docs.djangoproject.com/en/1.6/ref/settings/
 from decouple import config
 from dj_database_url import parse as db_url
 from unipath import Path
-BASE_DIR = Path(__file__).parent
-
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.6/howto/deployment/checklist/
+
+BASE_DIR = Path(__file__).parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = config('SECRET_KEY')
@@ -26,7 +26,7 @@ DEBUG = config('DEBUG', default=False, cast=bool)
 
 TEMPLATE_DEBUG = DEBUG
 
-ALLOWED_HOSTS = ['.localhost', '127.0.0.1', '.herokuapp.com']
+ALLOWED_HOSTS = ['.localhost', '127.0.0.1']
 
 
 # Application definition
@@ -38,6 +38,11 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    'django_extensions',
+    'south',
+    'reversion',
+
     '{{ project_name }}.core',
 )
 
@@ -82,5 +87,11 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
 
-STATIC_ROOT = BASE_DIR.child('staticfiles')
+STATIC_ROOT = BASE_DIR.child('static')
 STATIC_URL = '/static/'
+
+
+# Media files (user uploaded files)
+
+MEDIA_ROOT = BASE_DIR.child('media')
+MEDIA_URL = '/media/'

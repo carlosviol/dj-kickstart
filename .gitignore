@@ -1,17 +1,45 @@
+*.py[co]
+*.vim
+*.sw[op]
+*~
+*.sqlite3
+
+# Packages
+*.egg
+*.egg-info
 /bin
 /build
-/include
+/dist
+/eggs
 /lib
 /local
 /man
+/parts
 /share
 /Scripts
-.Python
-*.pyc
-*~
-*.swp
-*.sqlite3
-.DS_Store
+/sdist
+/var
+develop-eggs
+.installed.cfg
+
+# Project
+local_settings.py
 /.env
-staticfiles/
+static/
+
+# Installer logs
+pip-log.txt
+
+# Unit test / coverage reports
+.coverage
+.tox
+
+# OS
+.DS_Store
+
+# Common IDEs
 .idea/
+.project
+.settings
+
+/README.rst
