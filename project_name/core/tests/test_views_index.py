@@ -14,6 +14,6 @@ class IndexTest(TestCase):
 
     def test_template(self):
         """
-        Index must use template base.html
+        Home must use template index.html
         """
         self.assertTemplateUsed(self.resp, 'core/base.html')
