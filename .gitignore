@@ -1,8 +1,13 @@
-*.py[co]
-*.vim
-*.sw[op]
 *~
-*.sqlite3
+/README.rst
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*.sw[op]
+
+# C extensions
+*.so
 
 # Packages
 *.egg
@@ -22,24 +27,28 @@
 develop-eggs
 .installed.cfg
 
-# Project
-local_settings.py
-/.env
-static/
-
 # Installer logs
 pip-log.txt
 
 # Unit test / coverage reports
+.tox/
 .coverage
-.tox
+.cache
+nosetests.xml
+coverage.xml
 
 # OS
 .DS_Store
 
-# Common IDEs
+# Common IDEs & editors
+*.vim
 .idea/
 .project
 .settings
 
-/README.rst
+# Project
+reports/*.xml
+*.sqlite3
+local_settings.py
+/.env
+static/
