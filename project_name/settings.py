@@ -39,9 +39,12 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    'django_nose',
     'django_extensions',
     'south',
     'reversion',
+    'django_jenkins',
+    'model_mommy',
 
     '{{ project_name }}.core',
 )
@@ -95,3 +98,18 @@ STATIC_URL = '/static/'
 
 MEDIA_ROOT = BASE_DIR.child('media')
 MEDIA_URL = '/media/'
+
+
+# Django-Jenkins
+
+JENKINS_TASKS = (
+    'django_jenkins.tasks.run_pylint',
+    'django_jenkins.tasks.with_coverage',
+    'django_jenkins.tasks.run_csslint',
+    'django_jenkins.tasks.run_pep8',
+    'django_jenkins.tasks.run_flake8',
+    'django_jenkins.tasks.run_sloccount',
+)
+JENKINS_TEST_RUNNER = 'django_jenkins.runner.CITestSuiteRunner'
+
+PROJECT_APPS = ['{{ project_name }}']
