@@ -41,7 +41,6 @@ INSTALLED_APPS = (
 
     'django_nose',
     'django_extensions',
-    'south',
     'reversion',
     'django_jenkins',
     'model_mommy',
